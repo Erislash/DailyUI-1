@@ -1,0 +1,44 @@
+.signIn {
+    display: flex;
+    flex-direction: column;
+}
+.sign__text {
+    text-align: center;
+    padding: .5rem;
+
+    .sign__title {
+        color: $secColor;
+
+        span {
+            color: $mainColor;
+        }
+    }
+    .sign__subtitle {
+        color: $secColor;
+        font-weight: 300;
+        font-size: .8rem;
+    }
+}
+
+.wrongSection {
+    font-size: .8rem;
+    a {
+        color: $mainColor;
+        font-size: 1rem;
+    }
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+}
+
+.misc__terms {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    input[type="checkbox"] {
+        margin-right: .5rem;
+    }
+}

@@ -1,12 +1,15 @@
 .home {
     display: flex;
-    display: none;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
 
 
     &__image {
         width: 70%;
+        max-width: 250px;
         overflow: hidden;
         margin: 1rem auto;
     

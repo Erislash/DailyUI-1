@@ -37,10 +37,128 @@
                     -2px -2px 10px 1px rgba(rgb(114, 107, 241), .9);
 
             background: linear-gradient(150deg, #291ea0, #6c63ff);
-
             color: #cbcaff;
+            transition: all .3s ease;
+
+            &:hover {
+                box-shadow: 5px 5px 10px 1px rgba(#000, .2),
+                    -5px -5px 10px 1px rgba(rgb(114, 107, 241), .9);
+
+                background: linear-gradient(150deg, #190da0, #453bff);
+                color: #9d9cf5;
+            }
+
         }
 
     }
     
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+
+    &__field {
+        border: none;
+        width: 100%;
+        
+
+        display: flex;
+        flex-direction: column;
+        padding: 0 .4rem;
+        margin-bottom: 2rem;
+    }
+
+    &__label {
+        font-size: .8rem;
+    }
+
+    &__misc {
+        width: 100%;
+        display: flex;
+        font-size: .7rem;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    &__remember {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        input[type="checkbox"] {
+            margin-right: .5rem;
+        }
+    }
+
+    &__lost {
+        font-size: .85rem;
+        a {
+            color: $mainColor;
+        }
+    }
+
+    &__submit {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: 1.5rem 0;
+
+        width: 50%;
+        padding: .5rem 1rem;
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px 1px rgba(#000, .2),
+                    -2px -2px 10px 1px rgba(rgb(114, 107, 241), .9);
+
+        background: linear-gradient(150deg, #291ea0, #6c63ff);
+
+        color: #cbcaff;
+        transition: all .3s ease;
+        &:hover {
+            box-shadow: 5px 5px 10px 1px rgba(#000, .2),
+                -5px -5px 10px 1px rgba(rgb(114, 107, 241), .9);
+
+            background: linear-gradient(150deg, #190da0, #453bff);
+            color: #9d9cf5;
+        }
+    }
+}
+
+.input {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    border-radius: 5px;
+
+    box-shadow: 3px 3px 10px rgba(#000, .3),
+                -5px -5px 10px rgba(#fff, 1);
+
+                
+        background: linear-gradient(145deg, #fff 10%, #f2f2f2 50%, #eee 75%);
+
+    &__icon {
+        font-size: 1.2rem;
+        padding: .5rem 1rem;
+        color: $secColor;
+        background: transparent;
+    }
+
+    &_input {
+        font-family: Poppins;
+        border: none;
+        outline: none;
+        background: $background;
+        border-left: 1px solid #ccc;
+        padding: 0 1rem;
+        background: transparent;
+
+        width: 100%;
+    }
 }

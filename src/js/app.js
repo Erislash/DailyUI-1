@@ -17,15 +17,13 @@ function StartApp() {
     console.log(scene.dataset.state);
     ShowScene({current: scene.dataset.state, home, signIn, signUp});
 
-console.log(notRegisteredBtn);
 
     signInBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signIn')});
     signUpBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signUp')});
     notRegisteredBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signUp')});
-    alreadyAccountBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signIn')});
-    
-    
+    alreadyAccountBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signIn')});   
 }
+
 
 function ShowScene({current, home, signIn, signUp}) {
     home.style.display = home.id == current ? 'flex' : 'none';
@@ -34,8 +32,9 @@ function ShowScene({current, home, signIn, signUp}) {
 }
 
 function HandleSceneChange(e, newScene){
-        const scene = document.querySelector('#scene');
-        scene.dataset.state = newScene;
-        ShowScene({current: scene.dataset.state, home, signIn, signUp});
+    e.preventDefault();
+    const scene = document.querySelector('#scene');
+    scene.dataset.state = newScene;
+    ShowScene({current: scene.dataset.state, home, signIn, signUp});
     
 }
