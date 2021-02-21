@@ -24,7 +24,6 @@ function StartApp() {
     alreadyAccountBtn.addEventListener('click', function(e){ HandleSceneChange.call(this, e,'signIn')});   
 }
 
-
 function ShowScene({current, home, signIn, signUp}) {
     home.style.display = home.id == current ? 'flex' : 'none';
     signIn.style.display = signIn.id == current ? 'flex' : 'none';
@@ -36,5 +35,4 @@ function HandleSceneChange(e, newScene){
     const scene = document.querySelector('#scene');
     scene.dataset.state = newScene;
     ShowScene({current: scene.dataset.state, home, signIn, signUp});
-    
 }
