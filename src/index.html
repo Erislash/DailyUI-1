@@ -1,0 +1,190 @@
+<!--
+    Create a sign up page, modal, form, or app screen related to signing up for something. It could be for a volunteer event, contest registration, a giveaway, or anything you can image.
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5bf93b33ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/app.js"></script>
+    <title>Daily UI #1</title>
+</head>
+<body>
+    
+    <a href="./" class="logo">
+        <div class="logo__image">
+            <i class="fas fa-camera-retro"></i>
+        </div>
+
+        <div class="logo__name">
+            Momentum
+        </div>
+    </a>
+
+    <main data-state="home" class="body" id="scene">
+        <div class="home" id="home">
+            <div class="home__image">
+                <img src="./img/moments.svg" alt="Momentum Drawing">
+            </div>
+
+            <div class="home__quote quote">
+                <blockquote class="quote__body">
+                    "Photography is a way of feeling, of touching, of loving. What you have caught on film is captured forever… It remembers little things, long after you have forgotten everything."
+                </blockquote>
+                <p class="quote__author">&mdash;Aaron Siskind</p>
+            </div>
+
+            <div class="home__access access">
+                <button id="signInBtn" class="access__btn access__btn--in">Sign In</button>
+                <button id="signUpBtn" class="access__btn access__btn--up">Sign Up</button>
+            </div>
+        </div>
+
+        <div class="signIn" id="signIn">
+            <div class="sign__text">
+                <h3 class="sign__title">
+                    Sign in and start <span>sharing moments</span>
+                </h3>
+                <p class="sign__subtitle">
+                    Login here using your E-mail and password
+                </p>
+            </div>
+
+            <form class="sign__form form">
+                <!-- Email field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="emailSignIn">Your E-mail</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input 
+                            class="input_input"
+                            type="text"
+                            name="emailSignIn"
+                            id="emailSignIn"
+                            placeholder="example@email.com">
+                    </div>
+                </fieldset>
+
+                    <!-- Password Field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="passwordSignIn">Password</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-unlock-alt"></i>
+                        </div>
+                        <input class="input_input" type="password" name="passwordSignIn" id="passwordSignIn"
+                        placeholder="Password">
+                    </div>
+                </fieldset>
+
+                    <!-- Miscellaneous Options -->
+                    <!-- 
+                            Remember me
+                            Forgotten password
+                    -->
+                    <div class="form__misc misc">
+                        <div class="form__remember">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <div class="form__lost">
+                            <a href="#">Lost Password?</a>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="form__submit">
+                        Sign In
+                    </button>
+
+                    <!-- Change Section -->
+                    <p class="wrongSection">Not registered? <a id="notRegisteredBtn" href="#">Create Account</a></p>
+            </form>
+        </div>
+
+        <div class="signUp" id="signUp">
+            <div class="sign__text">
+                <h3 class="sign__title">
+                    Create Account
+                </h3>
+            </div>
+
+            <form class="sign__form form">
+                <!-- Username field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="usernameSignUp">Your Username</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input placeholder="Username" class="input_input" type="text" name="userSignUp" id="userSignUp">
+                    </div>
+                </fieldset>
+
+                <!-- Email field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="emailSignUp">Your E-mail</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input placeholder="E-mail" class="input_input" type="text" name="emailSignUp" id="emailSignUp">
+                    </div>
+                </fieldset>
+
+                <!-- Password Field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="passwordSignUp">Password</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-unlock-alt"></i>
+                        </div>
+                        <input placeholder="Password" class="input_input" type="password" name="passwordSignUp" id="passwordSignUp">
+                    </div>
+                </fieldset>
+
+                <!-- Password Field -->
+                <fieldset class="form__field">
+                    <label class="form__label" for="repeatPasswordSignIn">Repeat Password</label>
+                    <div class="form__input input">
+                        <div class="input__icon">
+                            <i class="fas fa-unlock-alt"></i>
+                        </div>
+                        <input placeholder="Repeat Password" class="input_input" type="password" name="repeatPasswordSignIn" id="repeatPasswordSignIn">
+                    </div>
+                </fieldset>
+
+                    <!-- Miscellaneous Options -->
+                    <!-- 
+                            Remember me
+                            Forgotten password
+                    -->
+                    <div class="form__misc misc">
+                        <div class="misc__remember">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">I agree to the terms and conditions</label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button class="form__submit" type="submit">
+                        Sign Up
+                    </button>
+
+                    <!-- Change Section -->
+                    <p class="wrongSection">Already have an account? <a id="alreadyAccountBtn" href="#">Login here</a></p>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

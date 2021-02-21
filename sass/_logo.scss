@@ -1,0 +1,17 @@
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &__image {
+        color: #6c63ff;
+        font-size: 1.6rem;
+        margin: 0;
+    }
+
+    &__name {
+        color: #3f3d56;
+        font-size: 1.2rem;
+        margin-top: -.8rem;
+    }
+}

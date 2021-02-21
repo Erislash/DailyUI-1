@@ -1,0 +1,19 @@
+.home {
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+
+
+    &__image {
+        width: 70%;
+        overflow: hidden;
+        margin: 1rem auto;
+    
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+}
